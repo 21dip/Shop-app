@@ -14,7 +14,7 @@ const CartItem = (props) => {
 
     useEffect(()=>{
        
-        const findDetail = Products.filter(product => product.id ===productId)[0];
+        const findDetail = Products.filter(product => product.id === productId)[0];
         setDetail(findDetail);
 
     },[productId])
@@ -22,7 +22,7 @@ const CartItem = (props) => {
     const handleMinusQuantity =()=>{
       dispatch(changeQuantity({
         productId: productId,
-        quantity: quantity - 1
+        quantity: quantity - 1  
       }));
     }
 
